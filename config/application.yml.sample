@@ -1,0 +1,7 @@
+DEFAULT_ADMIN: "admin@email.local"
+DEFAULT_USERNAME_ADMIN: "user"
+DEFAULT_PASSWORD_ADMIN: "pass"
+
+development:
+  DATABASE_PASSWORD: "pass"
+  DATABASE_USER: "user"

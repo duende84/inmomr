@@ -1,0 +1,15 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div>
+    <%= f.label :email, 'E-Mail' %>
+    <%= f.email_field :email, autofocus: true, class: "input-xxlarge" %>
+  </div>
+
+  <div>
+    <%= f.label :password, 'Contraseña' %>
+    <%= f.password_field :password, autocomplete: "off", class: "input-xxlarge" %>
+  </div>
+
+  <div>
+    <%= f.submit "Entrar", class: "btn btn-primary" %>
+  </div>
+<% end %>
