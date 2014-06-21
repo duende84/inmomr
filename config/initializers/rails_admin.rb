@@ -1,3 +1,5 @@
+Date::DATE_FORMATS[:default] = "%d-%m-%Y"
+
 RailsAdmin.config do |config|
 
   config.main_app_name = Proc.new { |controller| [ "Martha Restrepo", "Inmobiliario" ] }
@@ -32,5 +34,7 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.included_models = ['User']
+  config.included_models = [ 'Property', 'PropertyType', 'City', 'Neighborhood' , 'User', 'Owner' ]
+
+  RailsAdmin.config {|c| c.label_methods << :description }
 end

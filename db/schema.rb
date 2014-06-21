@@ -11,10 +11,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140614041015) do
+ActiveRecord::Schema.define(version: 20140621044702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cities", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "neighborhoods", force: true do |t|
+    t.string   "name"
+    t.string   "commune"
+    t.integer  "city_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "owners", force: true do |t|
+    t.string   "name"
+    t.float    "phone"
+    t.float    "cellphone"
+    t.string   "address"
+    t.string   "email"
+    t.string   "web_page"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "properties", force: true do |t|
+    t.integer  "owner_id"
+    t.integer  "property_type_id"
+    t.string   "category"
+    t.string   "state"
+    t.string   "address"
+    t.integer  "neighborhood_id"
+    t.integer  "price"
+    t.integer  "stratum"
+    t.text     "description"
+    t.boolean  "ads"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "property_types", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

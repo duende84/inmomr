@@ -39,7 +39,6 @@ class User < ActiveRecord::Base
   end
 
   rails_admin do
-
     configure :role, :enum do
       enum_method do
         :role_enum

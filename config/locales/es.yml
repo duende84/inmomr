@@ -204,3 +204,70 @@ es:
   activerecord:
     errors:
       <<: *errors
+    models:
+      city:
+        one: ciudad
+        other: ciudades
+      neighborhood:
+        one: barrio
+        other: barrios
+      owner:
+        one: propietario
+        other: propietarios
+      property:
+        one: inmueble
+        other: inmuebles
+      property_type:
+        one: tipo de inmueble
+        other: tipos de inmueble
+      user:
+        one: usuario
+        other: usuarios
+    attributes:
+      neighborhood:
+        name: Nombre
+        commune: Comuna
+        city: Ciudad
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización
+      city:
+        name: Nombre
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización
+      property:
+        owner: Propietario
+        property_type: Tipo de inmueble
+        category: Categoria
+        state: Estado
+        address: Direccion
+        neighborhood: Barrio
+        price: Precio
+        stratum: Estrato
+        description: Descripción
+        ads: ¿Tiene avisos?
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización
+      owner:
+        name: Nombre
+        phone: Telefono
+        cellphone: Celular
+        address: Direccion
+        email: Email
+        web_page: Pagina Web
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización
+      property_type:
+        name: Nombre
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización
+      user:
+        email: Email
+        username: Nombre de usuario
+        role: Rol
+        sign_in_count: Número de inicios de sesion
+        current_sign_in_at: Fecha de ingreso actual
+        last_sign_in_at: Ultima fecha de ingreso
+        current_sign_in_ip: IP actual
+        last_sign_in_ip: Ultima IP
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización

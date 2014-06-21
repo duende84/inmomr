@@ -1,0 +1,44 @@
+# == Schema Information
+#
+# Table name: properties
+#
+#  id               :integer          not null, primary key
+#  owner_id         :integer
+#  property_type_id :integer
+#  category         :string(255)
+#  state            :string(255)
+#  address          :string(255)
+#  neighborhood_id  :integer
+#  price            :integer
+#  stratum          :integer
+#  description      :text
+#  ads              :boolean
+#  created_at       :datetime
+#  updated_at       :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  owner_id: 1
+  property_type_id: 1
+  category: MyString
+  state: MyString
+  address: MyString
+  neighborhood_id: 1
+  price: 1
+  stratum: 1
+  description: MyText
+  ads: false
+
+two:
+  owner_id: 1
+  property_type_id: 1
+  category: MyString
+  state: MyString
+  address: MyString
+  neighborhood_id: 1
+  price: 1
+  stratum: 1
+  description: MyText
+  ads: false
