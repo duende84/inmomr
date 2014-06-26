@@ -22,6 +22,9 @@ class Property < ActiveRecord::Base
 	belongs_to :property_type
 	belongs_to :neighborhood
 
+  has_many :property_attachments
+  accepts_nested_attributes_for :property_attachments
+
 	validates_numericality_of :price, greater_than: 0, :allow_nil => true
 	validates_numericality_of :stratum, greater_than: 0, :allow_nil => true
 	validates_numericality_of :stratum, less_than_or_equal_to: 6, :allow_nil => true

@@ -34,7 +34,7 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.included_models = [ 'Property', 'PropertyType', 'City', 'Neighborhood' , 'User', 'Owner' ]
+  config.included_models = [ 'Property', 'PropertyType', 'City', 'Neighborhood' , 'User', 'Owner', 'PropertyAttachment' ]
 
   RailsAdmin.config {|c| c.label_methods << :description }
 end

@@ -217,6 +217,9 @@ es:
       property:
         one: inmueble
         other: inmuebles
+      property_attachment:
+        one: imágen
+        other: imágenes
       property_type:
         one: tipo de inmueble
         other: tipos de inmueble
@@ -245,6 +248,12 @@ es:
         stratum: Estrato
         description: Descripción
         ads: ¿Tiene avisos?
+        property_attachments: Imágenes
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización
+      property_attachment:
+        property: Inmueble
+        image: Imágen
         created_at: Fecha de creación
         updated_at: Fecha de actualización
       owner:
