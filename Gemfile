@@ -7,6 +7,7 @@ gem 'rails', '4.1.1'
 gem 'pg'
 
 # Assets
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -20,6 +21,9 @@ gem 'turbolinks'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+gem "therubyracer"
+gem "less-rails"
+gem 'twitter-bootstrap-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
