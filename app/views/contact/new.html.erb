@@ -1,0 +1,30 @@
+<div>
+	<h1>Contácto</h1>
+	<%= form_for Contact.new, :url => create_contact_path do |form| %>
+		<fieldset>
+			<div>
+				<%= form.label :name, "Nombre" %>
+				<%= form.text_field :name %>
+			</div>
+
+			<div>
+				<%= form.label :email, "Email" %>
+				<%= form.text_field :email %>
+			</div>
+
+			<div>
+				<%= form.label :subject, "Asunto" %>
+				<%= form.text_field :subject %>
+			</div>
+
+			<div>
+				<%= form.label :body, "Mensaje" %>
+				<%= form.text_area :body, :size => "50x5" %>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<%= form.submit "Enviar", class: "btn btn-primary" %>
+		</fieldset>
+	<% end %>
+</div>

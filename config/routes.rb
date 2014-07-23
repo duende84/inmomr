@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'create_contact', :via => :post
+
   devise_for :users
 
   devise_scope :user do
