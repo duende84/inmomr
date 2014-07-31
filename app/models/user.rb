@@ -28,7 +28,13 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username, :email
   validates_presence_of :username, :email, :role
 
-  ROLES = %w[admin author]
+  before_validation(on: :create) do
+    if self.role.blank?
+      self.role = "visitante"
+    end
+  end
+
+  ROLES = %w[admin visitante]
 
   def role?(base_role)
     ROLES.index(base_role.to_s) <= ROLES.index(role)

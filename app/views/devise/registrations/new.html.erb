@@ -9,6 +9,11 @@
 	</div>
 
   <div>
+    <%= f.label :username, 'Nombre de usuario' %>
+    <%= f.text_field :username, autofocus: true, class: "input-xxlarge" %>
+  </div>
+
+  <div>
   	<%= f.label :password, 'Contraseña' %>
     <%= f.password_field :password, autocomplete: "off", class: "input-xxlarge" %>
   </div>

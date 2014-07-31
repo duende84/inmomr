@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   layout :layout_by_resource
 
+  before_filter :update_sanitized_params, if: :devise_controller?
+
   protected
 
 	def layout_by_resource
@@ -12,5 +14,9 @@ class ApplicationController < ActionController::Base
 	  else
 	    "layout"
 	  end
+	end
+
+	def update_sanitized_params
+	  devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:username, :email, :password, :password_confirmation)}
 	end
 end
