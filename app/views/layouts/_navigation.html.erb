@@ -1,16 +1,23 @@
-<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-</a>
-<a class="brand" href="/">Martha Restrepo Inmobiliaria</a>
-<div class="nav-collapse">
-  <ul class="nav pull-right">
-    <li><%= link_to "Inicio", root_path %></li>
-    <li><%= link_to "Contacto", contact_path %></li>
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="/">Martha Restrepo Inmobiliaria</a>
+</div>
 
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav">
+		<li><%= link_to "Inicio", root_path %></li>
+		<li><%= link_to "Contacto", contact_path %></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
 		<li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios <span class="caret"></span></a>
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Usuarios <span class="caret"></span></a>
 			<ul class="dropdown-menu" role="menu">
 				<% if signed_in? %>
 					<li><%= link_to "Dashboard", rails_admin_path, method: :get %></li>
@@ -22,5 +29,5 @@
 				<% end %>
 			</ul>
 		</li>
-  </ul>
-</div>
+	</ul>
+</div><!-- /.navbar-collapse -->
